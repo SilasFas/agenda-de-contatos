@@ -9,25 +9,20 @@
 </head>
 
 <body>
-
     <main>
         <h1>Agenda de Contatos</h1>
-
         <div class="container">
             <section id="inputData">
                 <h2>Cadastrar novo contato</h2>
                 <form>
-
                     <span>
                         <label for="name">Nome: </label>
-                        <input type="text" name="name" id="name">
+                        <input type="text" name="name" id="name" required>
                     </span>
-
                     <span>
                         <label for="phone">Telefone: </label>
-                        <input type="tel" name="phone" id="phone" placeholder="(XX) 9XXXX-YYYY">
+                        <input type="tel" name="phone" id="phone" placeholder="(XX) 9XXXX-YYYY" required>
                     </span>
-
                     <button type="submit">Cadastrar</button>
                 </form>
                 <section id="validations">
@@ -37,15 +32,28 @@
                     <p>validação4</p>
                 </section>
             </section>
-
             <section id="outputData">
-                <h2>Lista de Contatos</h2>
-                <table></table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="firstTableLine" colspan="2">Lista de contatos</th>
+                        </tr>
+                        <tr>
+                            <th class="name">Nome</th>
+                            <th class="phone">Telefone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- remove the line below-->
+                        <tr>
+                            <td class="td1">Silas Arlindo </td>
+                            <td class="td2">(11)942595445</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
-
         </div>
     </main>
-
 </body>
 
 </html>
