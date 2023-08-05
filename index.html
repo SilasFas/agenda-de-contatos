@@ -17,44 +17,33 @@
                 <form>
                     <span>
                         <label for="name">Nome: </label>
-                        <input type="text" name="name" id="name" required>
+                        <input type="text" name="name" id="name" value="Silas Ferreira"> required value
                     </span>
                     <span>
                         <label for="phone">Telefone: </label>
-                        <input type="tel" name="phone" id="phone" placeholder="(XX) 9XXXX-YYYY" required>
+                        <input type="tel" name="phone" id="phone" placeholder="(XX) 9XXXX-YYYY"> required
                     </span>
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit" id="button-ID">Cadastrar</button>
                 </form>
-                <section id="validations">
-                    <p>validação1</p>
-                    <p>validação2</p>
-                    <p>validação3</p>
-                    <p>validação4</p>
-                </section>
             </section>
             <section id="outputData">
                 <table>
+                    <caption>Lista de contatos</caption>
                     <thead>
-                        <tr>
-                            <th class="firstTableLine" colspan="2">Lista de contatos</th>
-                        </tr>
                         <tr>
                             <th class="name">Nome</th>
                             <th class="phone">Telefone</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- remove the line below-->
-                        <tr>
-                            <td class="td1">Silas Arlindo </td>
-                            <td class="td2">(11)942595445</td>
-                        </tr>
+                        <!-- Data will be inserted here through JavaScript -->
                     </tbody>
                 </table>
-                <p class="pList">Lista vazia: Cadastre um contato para ver na lista</p>
+                <p id="p-message">Lista vazia: Cadastre um contato para ver na lista</p>
             </section>
         </div>
     </main>
+    <script src="index.js"></script>
 </body>
 
 </html>

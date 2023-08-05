@@ -44,7 +44,7 @@ h1 {
 }
 
 #outputData {
-    border-left: 1px solid #e6adec56;
+    border-left: 1px solid #e6adec94;
 
     display: flex;
     flex-direction: column;
@@ -106,46 +106,36 @@ button:hover {
     background-color: rgb(238, 200, 213);
 }
 
-#validations {
-    margin-top: 60px;
-    padding-left: 110px;
-}
-
 table,
 th,
 td {
     border-collapse: collapse;
-    text-align: center;
 }
 
 table {
     width: 70%;
 }
 
-.firstTableLine {
+caption {
     font-size: 1.5em;
     padding-bottom: 50px;
+    text-align: center;
+    font-weight: 700;
 }
 
 th {
     font-size: large;
 }
 
-.name,
-.td1 {
-    text-align: left;
+tr {
+    display: flex;
+    justify-content: space-between;
 }
 
-.phone,
-.td2 {
-    text-align: right;
-}
-
-.td1,
-.td2 {
+td {
     padding-top: 15px;
 }
 
-.pList {
+p {
     margin-top: 50px;
 }
