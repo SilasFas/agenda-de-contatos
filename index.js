@@ -2,6 +2,8 @@ const button = document.getElementById('button-ID')
 const inputName = document.getElementById('name')
 const inputPhone = document.getElementById('phone')
 let rows = ''
+let dataArray = []
+
 
 button.addEventListener('click', (event) => {
     event.preventDefault()
@@ -17,12 +19,22 @@ function validationInputName() {
         const validNameArray = fullName.split(' ')
         return validNameArray.length >= 2
     }
-
-    validName ? displayName(validName) : alert('Insira o nome e o sobrenome')
+    validName ? repeatedData(validName) : alert('Insira o nome e o sobrenome')
 }
 
-function displayName(nameBoolean) {
-    if (nameBoolean) {
+// check if the name and the phonenumber is being repeated
+function repeatedData(validNameBoolean) {
+    if (dataArray.includes(inputName.value)) {
+        alert(`${inputName.value} já está na lista de contatos`)
+    } else {
+        dataArray.push(inputName.value)
+        console.log(dataArray)
+        displayName(validNameBoolean)
+    }
+}
+
+function displayName(validNameBoolean) {
+    if (validNameBoolean) {
 
         let row = '<tr>'
         row += `<td>${inputName.value}</td>`
@@ -34,21 +46,6 @@ function displayName(nameBoolean) {
         tablebody.innerHTML = rows
 
         // clear the input name
-        inputName.value = ''
+        // inputName.value = ''
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-// return nomeComoArray.length >= 2
-
-
-
