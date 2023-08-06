@@ -5,7 +5,7 @@ const emptyMessage = document.getElementById('p-message')
 let rows = ''
 let dataArray = []
 
-inputPhone.addEventListener('input', function (event) {
+inputPhone.addEventListener('input', (event) => {
     let inputPhoneValue = event.target.value;
 
     // Remove any letters from the input value
@@ -51,11 +51,11 @@ function repeatedData(validNameBoolean, validPhoneBoolean) {
     } else {
         dataArray.push(inputName.value)
         dataArray.push(inputPhone.value)
-        console.log(dataArray)
         displayData(validNameBoolean, validPhoneBoolean)
     }
 }
 
+// display data on the contact list
 function displayData(validNameBoolean, validPhoneBoolean) {
     if (validNameBoolean, validPhoneBoolean) {
 
@@ -65,7 +65,6 @@ function displayData(validNameBoolean, validPhoneBoolean) {
         row += '</tr>'
         rows += row
 
-        console.log(rows)
         const tablebody = document.querySelector('tbody')
         tablebody.innerHTML = rows
 
